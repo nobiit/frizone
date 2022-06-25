@@ -1,0 +1,12 @@
+
+body[data-skin="orange"]{
+
+	// THEME PRIMARY COLORS
+
+	$cl-primary-color: #f45d22;
+	$cl-primary-link-color: #f45d22;
+
+	--cl-primary-color: #{$cl-primary-color};
+	--cl-primary-color-darken-5: #{darken($cl-primary-color, 5)};
+	--cl-primary-link-color: #{$cl-primary-link-color};
+}
