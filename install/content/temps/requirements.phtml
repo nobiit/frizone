@@ -7,7 +7,7 @@ $gdlib_exists  = (extension_loaded('gd') && function_exists('gd_info'));
 $mbstr_exists  = extension_loaded('mbstring');
 $phpzip_exists = extension_loaded('zip');
 $config_exists = ($win_os_family == true) ? true : is_writable(PROJ_RP . '/core/settings.php');
-$dbsql_exists  = ($win_os_family == true) ? true : (file_exists(PROJ_RP . '/colibri-db.sql') && is_readable(PROJ_RP . '/colibri-db.sql'));
+$dbsql_exists  = ($win_os_family == true) ? true : (file_exists(PROJ_RP . '/frizone-db.sql') && is_readable(PROJ_RP . '/frizone-db.sql'));
 $curl_status   = function_exists('curl_version');
 $reqs_exists   = array();
 $reqs_exists[] = $php_version;
@@ -232,10 +232,10 @@ $_SESSION['init'] = array(
 					</tr>
 					<tr>
 						<td>
-							<b>colibri-db.sql</b>
+							<b>frizone-db.sql</b>
 						</td>
 						<td>
-							Required colibri-db.sql for the installation <strong>(Located in the root folder)</strong> 
+							Required frizone-db.sql for the installation <strong>(Located in the root folder)</strong> 
 						</td>
 						<td>
 							<span class="requirement-status">

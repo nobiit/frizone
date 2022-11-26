@@ -113,7 +113,7 @@ $site_url    = "' . $site_url . '"; // E.g (https://www.mysite.com)
 
 		$config_file = file_put_contents(PROJ_RP . '/core/settings.php', trim($settings_file_content));
 		if ($config_file) {
-			$db_sql_query  = file_get_contents(PROJ_RP . '/colibri-db.sql');
+			$db_sql_query  = file_get_contents(PROJ_RP . '/frizone-db.sql');
 			$insert_status = true;
 
 			preg_match_all('/\{\%begin\%\}(.+?)\{\%end\%\}/is',$db_sql_query, $matches, PREG_PATTERN_ORDER);
