@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - 8080:80
+  mariadb:
+    image: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - 8306:3306
+  phpmyadmin:
+    image: bitnami/phpmyadmin
+    environment:
+      - DATABASE_HOST=mariadb
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+    ports:
+      - 9306:8080
+volumes:
+  db_data:

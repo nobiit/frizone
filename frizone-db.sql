@@ -561,7 +561,7 @@
 {%end%}
 
 {%begin%}
-  INSERT INTO `cl_configs` (`id`, `title`, `name`, `value`, `regex`) VALUES (NULL, 'Google oAuth', 'google_oauth', 'on', '/^(on|off)$/'), (NULL, 'Twitter oAuth', 'twitter_oauth', 'on', '/^(on|off)$/');
+  INSERT INTO `cl_configs` (`id`, `title`, `name`, `value`, `regex`) VALUES (NULL, 'Google oAuth', 'google_oauth', 'off', '/^(on|off)$/'), (NULL, 'Twitter oAuth', 'twitter_oauth', 'off', '/^(on|off)$/');
 {%end%}
 
 {%begin%}

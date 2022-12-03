@@ -4,7 +4,9 @@ RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteCond %{HTTP:X-Forwarded-Proto} !https
 # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-                                            
+
+php_value upload_max_filesize 1G
+php_value post_max_size 1G
 
 RewriteRule ^/$ index.php?app=home [QSA]
 RewriteRule ^language/(\w{2,25})(\/|)$ index.php?app=home&language=$1 [QSA]

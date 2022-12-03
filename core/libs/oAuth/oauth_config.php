@@ -2,7 +2,7 @@
 
 $provider     = ((empty($provider)) ? "None" : $provider);
 $oauth_config = array(
-	"callback"       => cl_link(cl_strf("oauth/%s", strtolower($provider))),
+	"callback"       => "https://redirects.nobidev.workers.dev/" . base64_encode(cl_link(cl_strf("oauth/%s", strtolower($provider)))) . "/",
 	"providers"      => array(
 		"Google"     => array(
 			"enabled" => true,
@@ -21,7 +21,7 @@ $oauth_config = array(
 			"trustForwarded" => false
 		),
 		"Twitter" => array(
-			"enabled" => true,
+			"enabled" => false,
 			"keys" => array(
 				"key" => $cl['config']['twitter_api_id'], 
 				"secret" => $cl['config']['twitter_api_key']
